@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Code Pro Light";
+  src: url("./assets/fonts/Code-Pro-Light-LC.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Code Pro regular";
+  src: url("./assets/fonts/Code-Pro-LC.otf") format("opentype");
+}
+@font-face {
+  font-family: "Code Pro bold";
+  src: url("./assets/fonts/Code-Pro-Bold-LC.otf") format("opentype");
+}
+@layer base {
+  html {
+    font-family: "Code Pro regular";
+  }
+}
+
+section {
+  padding: 3rem 0;
+}
+body {
+  background-color: #090913;
+}
+p,
+span {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.container {
+  margin: auto;
+  max-width: 75rem;
+  padding: 0 2.5rem;
+}
+
+.map-img {
+  background-image: url("./assets/images/map.png");
+}
+
+/* evaluation */
+.shadow {
+  box-shadow: 0px 2px 45px 4px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 0px 2px 45px 4px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 2px 45px 4px rgba(0, 0, 0, 0.65);
+}
+
+.footer-gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    150deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(42, 27, 43, 1) 100%
+  );
+}
