@@ -1,17 +1,19 @@
 import React from "react";
-import { mainLogo } from "../ui/images";
+import { footerBg } from "../ui/images";
 
 export default function Footer() {
   return (
-    <footer className="footer-gradient">
+    <footer className="footer relative bg-main-bg border-t border-primary/20 pt-12 pb-10">
       <div className="container">
-        <div className="wrapper grid gap-12">
+        <div className="wrapper grid gap-12 ml-10">
           <div className="top-content grid grid-cols-2 md:grid-cols-4 gap-10">
             <div className="item flex gap-1">
-              <div className="logo">
-                <a href="#" className="main-logo flex gap-1 relative">
-                  <img className="relative" src={mainLogo} alt="TheFundedHub" />
-                </a>
+              <div className="logo absolute -left-[10rem]">
+                <img className="w-[18rem]" src={footerBg} alt="TheFundedHub" />
+              </div>
+
+              <div className="tfh">
+                <h2 className="text-3xl font-bold">TheFunded <br /> Hub</h2>
               </div>
             </div>
 

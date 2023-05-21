@@ -6,6 +6,7 @@ import discord from "../assets/images/discord.svg";
 import discordMobile from "../assets/images/discord-mobile.png";
 import arrow from "../assets/images/arrow.svg";
 import globe from "../assets/images/globe.png";
+import footerBg from "../assets/images/footer-logo.png";
 
 export {
   mainLogo,
@@ -16,5 +17,5 @@ export {
   discordMobile,
   arrow,
   globe,
+  footerBg,
 };
-
