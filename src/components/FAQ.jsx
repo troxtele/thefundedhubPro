@@ -1,22 +1,22 @@
 import React from "react";
-import { arrow } from "../ui/images";
+import { arrow, tringle } from "../ui/images";
 
 export default function FAQ() {
   return (
-    <section className="faq">
+    <section className="faq relative">
       <div className="container">
         <div className="wrapper grid gap-12 justify-center items-center">
           <div className="heading grid gap-2 justify-center text-center">
             <h2 className="uppercase text-[1.7rem] font-extrabold">FAQ</h2>
 
-            <p>
+            <p className="font-codePro">
               If you don&apos;t find your answer in frequently asked questions
               don&apos;t hesitate contacting us at
             </p>
 
             <a
               href="mailto: support@thefundedhub.com"
-              className="underline text-xl"
+              className="underline text-lg"
             >
               support@thefundedhub.com
             </a>
@@ -128,13 +128,26 @@ export default function FAQ() {
           <div className="readmore flex justify-center">
             <a
               href="#"
-              className="uppercase font-Montserrat text-sm font-bold py-2.5 px-8 border-primary border-2 rounded-xl"
+              className="uppercase font-Montserrat text-xs font-bold py-2 px-10 border-primary border-2 rounded-xl"
             >
               read more
             </a>
           </div>
+
+          {/* Bottom Text */}
+          <div className="bottom-texts grid justify-center items-center mt-15 mb-10 text-center">
+            <h2 className="font-codePro text-3xl">Your Skills, Our Capital.</h2>
+            <h4>TheFundedHub</h4>
+          </div>
         </div>
       </div>
+
+      {/* triangle */}
+      <img
+        className="triangle absolute -bottom-[18rem] -right-[15rem]  w-[40rem] rotate-[140deg] opacity-[0.25]"
+        src={tringle}
+        alt="tringle"
+      />
     </section>
   );
 }

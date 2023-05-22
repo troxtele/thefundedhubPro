@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Code Pro Light";
-  src: url("./assets/fonts/Code-Pro-Light-LC.woff2") format("woff2");
+  src: url("./assets/fonts/Code-Pro-Light-LC.ttf") format("truetype");
 }
 @font-face {
   font-family: "Code Pro regular";
@@ -29,22 +29,23 @@ body {
 p,
 span {
   font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 1.2rem;
-}
-
-p {
-  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1.15rem;
 }
 
 .container {
   margin: auto;
-  max-width: 75rem;
+  max-width: 80rem;
   padding: 0 2.5rem;
 }
 
 .map-img {
   background-image: url("./assets/images/map.png");
+}
+
+.prices span {
+  font-size: 0.9rem;
+  font-family: "Code Pro regular";
 }
 
 /* evaluation */
@@ -61,4 +62,24 @@ p {
     rgba(0, 0, 0, 1) 0%,
     rgba(42, 27, 43, 1) 100%
   );
+}
+/* Swipe caroulsel */
+
+.swiper-wrapper {
+  width: 100%;
+}
+
+/* Animations */
+
+.globe-rotate {
+  animation: spin 100s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

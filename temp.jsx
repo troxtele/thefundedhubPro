@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { tringle } from "../ui/images";
 
 export default function Prices() {
   const [btnNum, setBtnNum] = useState(0);
 
-  const days = ["45", "10"];
+  const [btnClr, setBtnClr] = useState(NaN);
+
+  const days = 45;
   const priceValues = {
     0: ["500", "500", "500", "1,000", "1,000", "1,000", "800", "500"],
     1: ["500", "500", "500", "1,000", "1,000", "1,000", "1,000", "500"],
@@ -25,9 +26,13 @@ export default function Prices() {
 
   const refundable = ["1080", "127", "227", "327", "527"];
 
+  const handleClick = (price, btn) => {
+    setBtnNum(price);
+    setBtnClr(btn);
+  };
   return (
-    <section className="prices relative">
-      <div className="container z-10 relative">
+    <section className=" price">
+      <div className="container">
         <div className="wrapper grid gap-12 justify-center items-center">
           <div className="heading grid gap-4 justify-center items-center text-center">
             <h2 className="text-3xl font-extrabold">Price</h2>
@@ -38,23 +43,19 @@ export default function Prices() {
           </div>
 
           {/* Desktop version */}
-          <div className="desktop-content hidden lg:grid xl:grid-cols-11 gap-5 min-w-full border-2 border-primary/30 rounded-xl py-8 px-6">
+          <div className="desktop-content hidden lg:grid grid-cols-5 min-w-full border-2 border-primary/30 rounded-xl py-8 px-6">
             {/* Left side */}
-            <div className="left col-span-5  grid items-center justify-start gap-4 rounded-xl  font-medium">
+            <div className="left col-span-2  grid items-center justify-start gap-4 rounded-xl  font-medium">
               <div className="heading grid gap-5">
                 <h4>
                   Choose your <span className="font-bold">Balance</span>:
                 </h4>
 
-                <div className="prices grid grid-cols-3 gap-4">
+                <div className="prices grid grid-cols-2 gap-4">
                   <div className="price">
                     <button
-                      className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
-                        btnNum === 1
-                          ? "outline-2 outline-all"
-                          : "outline-1 outline-primary"
-                      }`}
-                      onClick={() => setBtnNum(1)}
+                      className="w-[7rem] py-2.5 rounded-md outline outline-1 outline-primary leading-[0.7]"
+                      onClick={() => handleClick(1)}
                     >
                       $ 5.000
                     </button>
@@ -62,12 +63,8 @@ export default function Prices() {
 
                   <div className="price">
                     <button
-                      className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
-                        btnNum === 2
-                          ? "outline-2 outline-all"
-                          : "outline-1 outline-primary"
-                      }`}
-                      onClick={() => setBtnNum(2)}
+                      className="w-[7rem] py-2.5 rounded-md outline outline-1 outline-primary leading-[0.7]"
+                      onClick={() => handleClick()}
                     >
                       $ 10.000
                     </button>
@@ -75,12 +72,8 @@ export default function Prices() {
 
                   <div className="price">
                     <button
-                      className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
-                        btnNum === 3
-                          ? "outline-2 outline-all"
-                          : "outline-1 outline-primary"
-                      }`}
-                      onClick={() => setBtnNum(3)}
+                      className="w-[7rem] py-2.5 rounded-md outline outline-1 outline-primary leading-[0.7]"
+                      onClick={() => handleClick()}
                     >
                       $ 25.000
                     </button>
@@ -88,12 +81,8 @@ export default function Prices() {
 
                   <div className="price">
                     <button
-                      className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
-                        btnNum === 4
-                          ? "outline-2 outline-all"
-                          : "outline-1 outline-primary"
-                      }`}
-                      onClick={() => setBtnNum(4)}
+                      className="w-[7rem] py-2.5 rounded-md outline outline-1 outline-primary leading-[0.7]"
+                      onClick={() => handleClick()}
                     >
                       $ 50.000
                     </button>
@@ -101,12 +90,8 @@ export default function Prices() {
 
                   <div className="price">
                     <button
-                      className={`w-[7rem] py-2.5 rounded-md outline leading-[0.7] ${
-                        btnNum === 5
-                          ? "outline-2 outline-all"
-                          : "outline-1 outline-primary"
-                      }`}
-                      onClick={() => setBtnNum(5)}
+                      className="w-[7rem] py-2.5 rounded-md outline-primary outline-1 outline leading-[0.7]"
+                      onClick={() => handleClick()}
                     >
                       $ 100.000
                     </button>
@@ -114,12 +99,13 @@ export default function Prices() {
                 </div>
               </div>
 
-              <div className="refund flex w-full items-center">
+              <div className="refund flex justify-around items-center">
                 <span className="text-base text-bold font-codePro">
-                  Refundable fee:
+                  {" "}
+                  Refundable fee:{" "}
                 </span>
-                <span className="text-xl font-extrabold ml-4">
-                  $ {refundable[btnNum - 1]}
+                <span className="text-xl font-extrabold w-[]">
+                  $ {refundable[btnNum]}
                 </span>
               </div>
 
@@ -133,20 +119,18 @@ export default function Prices() {
               </div>
             </div>
 
-            <div className=" grid col-span-6 justify-start gap-3 rounded-xl">
+            <div className=" grid col-span-3 justify-start gap-3 rounded-xl">
               <div className="mt-12 item grid grid-cols-6 gap-6 px-4 py-1 border border-primary/30 rounded-lg text-center">
                 <span className="col-span-3 text-start">
                   Trading <span className="font-bold">period</span>:
                 </span>
-                <div className="col-span-1 relative before:absolute before:font-bold before:content-['Phase_1'] before:-top-12">
-                  <span className="day-one">{btnNum === 0 ? "30" : "45"}</span>{" "}
-                  Days
+                <div className="col-span-1 relative before:absolute before:content-['Phase_1'] before:-top-12">
+                  <span className="day-one">30</span> Days
                 </div>
-                <div className="col-span-1 relative before:absolute before:font-bold before:content-['Phase_2'] before:-top-12">
-                  <span className="day-two">{btnNum === 0 ? "30" : "45"}</span>{" "}
-                  Days
+                <div className="col-span-1 relative before:absolute before:content-['Phase_2'] before:-top-12">
+                  <span className="day-two">60</span> Days
                 </div>
-                <span className="col-span-1 relative before:absolute before:font-bold before:content-['Funded'] before:-top-12">
+                <span className="col-span-1 relative before:absolute before:content-['Funded'] before:-top-12">
                   Indefinite
                 </span>
               </div>
@@ -156,12 +140,8 @@ export default function Prices() {
                   Minimum trading
                   <span className="font-bold"> days</span>:
                 </span>
-                <span className="col-span-1">
-                  {btnNum === 0 ? "5" : "10"} Days
-                </span>
-                <span className="col-span-1">
-                  {btnNum === 0 ? "5" : "10"} Days
-                </span>
+                <span className="col-span-1">5 Days</span>
+                <span className="col-span-1">5 Days</span>
                 <span className="col-span-1">-</span>
               </div>
 
@@ -197,7 +177,7 @@ export default function Prices() {
 
               <div className="item grid grid-cols-6 gap-6 px-4 py-1 border border-primary/30 rounded-lg text-center">
                 <span className="col-span-3 text-start">
-                  Profit <span className="font-bold">Target</span>:
+                  Trading <span className="font-bold">period</span>:
                 </span>
                 <div className="col-span-1">
                   $ <span className="priceVal">{priceValues[btnNum][6]}</span>
@@ -220,9 +200,7 @@ export default function Prices() {
 
                 <div className="prices flex flex-wrap gap-4">
                   <div className="price">
-                    <button
-                      className={`"w-[7rem py-2.5 rounded-md outline outline-1 outline-primary leading-[0.7]`}
-                    >
+                    <button className="w-[7rem] py-2.5 rounded-md outline outline-1 outline-primary leading-[0.7]">
                       $ 10.000
                     </button>
                   </div>
@@ -442,9 +420,9 @@ export default function Prices() {
 
               <div className="refund flex gap-6 place-self-center items-center">
                 <span> Refundable fee: </span>
-                <h4 className="text-2xl font-extrabold">
+                <span className="text-xl font-extrabold">
                   $ {refundable[btnNum]}
-                </h4>
+                </span>
               </div>
 
               <div className="btn flex justify-center">
@@ -459,13 +437,6 @@ export default function Prices() {
           </div>
         </div>
       </div>
-
-      {/* triangle */}
-      <img
-        className="triangle absolute -bottom-[25rem] -left-[25rem]  w-[50rem] rotate-[80deg] opacity-[0.2]"
-        src={tringle}
-        alt="tringle"
-      />
     </section>
   );
 }

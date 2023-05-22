@@ -11,9 +11,8 @@ import FAQ from "../components/FAQ";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Navbar />
-      {/* Main Section */}
       <Hero />
       <Evaluation />
       <Benefits />
@@ -26,6 +25,6 @@ export default function Home() {
       <div className="hidden h-0 w-0 opacity-0 left-0 visible invisible"></div>
 
       <script src="./js/script.js"></script>
-    </div>
+    </>
   );
 }

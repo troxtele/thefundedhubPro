@@ -3,58 +3,48 @@ import { footerBg } from "../ui/images";
 
 export default function Footer() {
   return (
-    <footer className="footer relative bg-main-bg border-t border-primary/20 pt-12 pb-10">
+    <footer className="footer relative bg-main-bg pt-12 pb-10">
       <div className="container">
-        <div className="wrapper grid gap-12 ml-10">
+        <div className="wrapper grid gap-12 ml-20">
           <div className="top-content grid grid-cols-2 md:grid-cols-4 gap-10">
             <div className="item flex gap-1">
               <div className="logo absolute -left-[10rem]">
-                <img className="w-[18rem]" src={footerBg} alt="TheFundedHub" />
+                <img
+                  className="w-[18rem] globe-rotate"
+                  src={footerBg}
+                  alt="TheFundedHub"
+                />
               </div>
 
               <div className="tfh">
-                <h2 className="text-3xl font-bold">TheFunded <br /> Hub</h2>
+                <h2 className="text-3xl font-bold">
+                  TheFunded <br /> Hub
+                </h2>
               </div>
             </div>
 
-            <div className="item">
+            <div className="item -ml-10">
               <div className="heading">
                 <h4 className="font-bold">Headquarters:</h4>
               </div>
 
-              <div className="info mt-1">
-                <span className="uppercase text-sm">THE FUNDED HUB LTD</span>
-                <span className="text-sm">
-                  Honvéd utca 8. 1st floor, 1054 Budapest, Hungary.
+              <div className="info grid">
+                <span className="uppercase text-sm font-codePro">
+                  THE FUNDED HUB LTD
+                </span>
+                <span className="text-sm font-codePro font-extrabold">
+                  27 Old Gloucester Street, London, United Kingdom, WC1N 3AX
                 </span>
               </div>
             </div>
 
-            <div className="item">
+            <div className="item ml-10">
               <div className="heading">
                 <h4 className="font-bold">Contact Us:</h4>
               </div>
 
-              <div className="contact mt-1 grid gap-1">
+              <div className="contact mt-1 grid">
                 <div className="email flex items-center gap-2">
-                  <div className="img">
-                    <svg
-                      className="text-all"
-                      stroke="currentColor"
-                      fill="currentColor"
-                      strokeWidth="0"
-                      viewBox="0 0 14 16"
-                      height="1.3em"
-                      width="1.3em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z"
-                      ></path>
-                    </svg>
-                  </div>
-
                   <a
                     className="break-all"
                     href="mailto: support@thefundedhub.com"
@@ -64,32 +54,6 @@ export default function Footer() {
                 </div>
 
                 <div className="insta flex items-center gap-2">
-                  <div className="img">
-                    <svg
-                      className="text-all"
-                      stroke="currentColor"
-                      fill="none"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      height="1.2em"
-                      width="1.2em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="2"
-                        y="2"
-                        width="20"
-                        height="20"
-                        rx="5"
-                        ry="5"
-                      ></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                  </div>
-
                   <a
                     target="_blank"
                     href="https://www.instagram.com/fundedhub/"
@@ -101,30 +65,38 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="item">
+            <div className="item flex justify-center">
               <ul>
                 <li>
-                  <a href="#">Term and Condition</a>
+                  <a href="#" className="text-sm">
+                    Term and Condition
+                  </a>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <a href="#" className="text-sm">
+                    Privacy Policy
+                  </a>
                 </li>
                 <li>
-                  <a href="#">Cookie Policy</a>
+                  <a href="#" className="text-sm">
+                    Cookie Policy
+                  </a>
                 </li>
                 <li>
-                  <a href="#">Contact Us</a>
+                  <a href="#" className="text-sm">
+                    Contact Us
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="hidden sm:block bottom-content text-center">
-            <p className="text-xs font-normal">
+            <p className="text-[0.6rem] font-normal">
               The Funded Hub is a brand owned by THE FUNDED HUB LTD (Company
               registration number: 14679272)
             </p>
-            <p className="text-xs font-normal mt-2">
+            <p className="text-[0.6rem] font-normal mt-2">
               The Funded Hub is a brand owned by THE FUNDED HUB LTD. All
               information available on this site is intended solely for the
               study purposes related to trading on financial markets and does

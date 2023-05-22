@@ -27,14 +27,14 @@ export default function Discord() {
             <div className="heading hidden sm:block">
               <h2 className="text-[1.7rem] font-extrabold">JOIN OUR DISCORD</h2>
             </div>
-            <p>
+            <p className="text-base font-codePro">
               Where veteran and rookie traders all come together to talk about
               the markets and keep up to date with all annoucements.
             </p>
             <div className="mt-2 btn uppercase flex">
               <a
                 href="#"
-                className="uppercase font-Montserrat text-sm font-bold py-2.5 px-8 border-primary border-2 rounded-xl"
+                className="uppercase font-Montserrat text-xs font-bold py-2 px-6 border-primary border-2 rounded-xl"
               >
                 join our discord
               </a>
