@@ -21,22 +21,34 @@
 }
 
 section {
-  padding: 3rem 0;
+  padding-top: 5rem;
 }
 body {
   background-color: #090913;
 }
+
+h1, h2 {
+  line-height: 1;
+}
+
 p,
 span {
-  font-family: "Montserrat";
-  font-weight: 400;
+  font-family: "Code Pro regular";
   font-size: 1.15rem;
 }
 
 .container {
   margin: auto;
-  max-width: 80rem;
-  padding: 0 2.5rem;
+  max-width: 70rem;
+  padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+  margin: auto;
+  max-width: 70rem;
+  padding: 0 1rem;
+}
 }
 
 .map-img {
@@ -69,17 +81,3 @@ span {
   width: 100%;
 }
 
-/* Animations */
-
-.globe-rotate {
-  animation: spin 100s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

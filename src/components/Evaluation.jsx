@@ -16,12 +16,16 @@ export default function Evaluation() {
       <section className="evaluation relative  py-[2.5rem] md:py-[3.5rem]elative md:max-w-[90%] md:m-auto">
         <div className="container z-10 relative">
           <div className="wrapper">
-            <div className="heading grid gap-4 justify-center items-center text-center">
-              <h2 className="capitalize font-extrabold text-[1.7rem]">
-                Evaluation Program
+            {/* capitalize font-medium text-[2rem] tracking-tighter */}
+            <div className="heading grid gap-4 md:justify-center items-center md:text-center">
+              <h2 className="capitalize font-medium text-3xl xs:text-4xl md:text-[2rem] tracking-tighter">
+                <span className="text-primary md:text-inherit font-medium text-3xl xs:text-4xl md:text-[2rem] tracking-tighter ">
+                  Evaluation
+                </span>{" "}
+                Program
               </h2>
 
-              <div className="paras">
+              <div className="paras mt-2 md:mt-0">
                 <p>
                   Prove your trading skills by passing our 2-Phase Challenge
                   Program.
@@ -33,7 +37,6 @@ export default function Evaluation() {
                 <p>You earn up to 80% of the profits.</p>
               </div>
             </div>
-
             <div className="cards flex flex-wrap gap-8 md:gap-12 justify-center items-center mt-10">
               <Swiper
                 breakpoints={{
@@ -48,49 +51,52 @@ export default function Evaluation() {
                 }}
                 effect={"cards"}
                 grabCursor={true}
-                spaceBetween={30}
-                className="mySwiper flex flex-wrap gap-8 md:gap-12 justify-center items-center w-full"
+                spaceBetween={50}
+                className="mySwiper flex flex-wrap gap-8 md:gap-10 justify-between items-center w-full"
               >
                 {/* card */}
                 <SwiperSlide className="flex justify-center items-center">
-                  <div className="card flex flex-col gap-4 py-6 px-1 rounded-2xl bg-main-bg/70 backdrop-blur-xl border-all/70 border max-w-[19rem] w-full">
-                    <div className="card-top py-4 px-2 rounded-xl bg-primary flex gap-2 justify-between items-center text-main-bg">
+                  <div className="card flex flex-col gap-4 py-6 px-2 rounded-2xl bg-main-bg/80 backdrop-blur-xl border-all/20 border w-full">
+                    <div className="card-top py-4 px-3 rounded-xl bg-primary flex gap-2 justify-between items-center text-black">
                       <div className="left max-w-[10rem]">
-                        <h4 className="font-semibold">Phase 1</h4>
-                        <span className="text-sm flex font-codePro font-bold">
+                        <h4 className="font-codeProBold">Phase 1</h4>
+                        <span className="text-sm flex font-codePro font-thin">
                           Starting your Evaluation process
                         </span>
                       </div>
-                      <div className="right grid ">
+                      <div className="right grid">
                         <div className="percent">
-                          <h3 className=" font-codeProBold text-3xl text-end">
+                          <h3 className="font-codeProBold text-3xl text-end">
                             10%
                           </h3>
-                          <span className="flex justify-end text-xs font-codePro font-bold text-end">
+                          <span className="flex justify-end text-[0.7rem] font-codePro text-end">
                             Target Profit
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="card-middle grid gap-3 px-4 font-thin">
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">10</span> minimum Trading
-                        Days
+                    <div className="card-middle grid gap-5 px-4 font-thin">
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">10</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">5%</span> minimum Trading
-                        Days
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">5%</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">10%</span> minimum Trading
-                        Days
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">10%</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
+                      <p className="text-base font-normal font-codePro">
                         Trading Period up to
-                        <span className="font-bold"> 45 days</span>
+                        <span className="font-codeProBold text-base">
+                          {" "}
+                          45 days
+                        </span>
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
+                      <p className="text-base font-normal font-codePro">
                         Registration fee
                       </p>
                     </div>
@@ -107,44 +113,47 @@ export default function Evaluation() {
                 </SwiperSlide>
                 {/* card */}
                 <SwiperSlide className="flex justify-center items-center">
-                  <div className="card flex flex-col gap-4 py-6 px-1 rounded-2xl bg-main-bg/70 backdrop-blur-xl border-all/70 border max-w-[19rem] w-full">
-                    <div className="card-top py-4 px-2 rounded-xl bg-primary flex gap-2 justify-between items-center text-main-bg">
+                  <div className="card flex flex-col gap-4 py-6 px-2 rounded-2xl bg-main-bg/80 backdrop-blur-xl border-all/20 border w-full">
+                    <div className="card-top py-4 px-3 rounded-xl bg-primary flex gap-2 justify-between items-center text-black">
                       <div className="left max-w-[10rem]">
-                        <h4 className="font-semibold">Phase 2</h4>
-                        <span className="text-sm flex font-codePro font-bold">
+                        <h4 className="font-codeProBold">Phase 2</h4>
+                        <span className="text-sm flex font-codePro font-thin">
                           One step away to be our Funded Trader
                         </span>
                       </div>
                       <div className="right grid">
                         <div className="percent">
-                          <h3 className=" font-codeProBold text-3xl text-end">
+                          <h3 className="font-codeProBold text-3xl text-end">
                             5%
                           </h3>
-                          <span className="flex justify-end text-xs font-codePro font-bold text-end">
+                          <span className="flex justify-end text-[0.7rem] font-codePro text-end">
                             Target Profit
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="card-middle grid gap-3 px-4 font-thin">
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">10</span> minimum Trading
-                        Days
+                    <div className="card-middle grid gap-5 px-4 font-thin">
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">10</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">5%</span> minimum Trading
-                        Days
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">5%</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">10%</span> minimum Trading
-                        Days
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">10%</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
+                      <p className="text-base font-normal font-codePro">
                         Trading Period up to
-                        <span className="font-bold"> 45 days</span>
+                        <span className="font-codeProBold text-base">
+                          {" "}
+                          45 days
+                        </span>
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">-</p>
+                      <p className="text-base font-normal font-codePro">-</p>
                     </div>
 
                     <div className="card-bottom mt-4 flex justify-center items-center text-center">
@@ -159,44 +168,44 @@ export default function Evaluation() {
                 </SwiperSlide>
                 {/* card */}
                 <SwiperSlide className="flex justify-center items-center">
-                  <div className="card flex flex-col gap-4 py-6 px-1 rounded-2xl bg-main-bg/70 backdrop-blur-xl border-all/70 border max-w-[19rem] w-full">
-                    <div className="card-top py-4 px-2 rounded-xl bg-primary flex gap-2 justify-between items-center text-main-bg">
+                  <div className="card flex flex-col gap-4 py-6 px-2 rounded-2xl bg-main-bg/80 backdrop-blur-xl border-all/20 border w-full">
+                    <div className="card-top py-4 px-3 rounded-xl bg-primary flex gap-2 justify-between items-center text-black">
                       <div className="left max-w-[10rem]">
-                        <h4 className="font-semibold">Funded</h4>
-                        <span className="text-sm flex font-codePro font-bold">
-                          Trade with our funds in the Hub
+                        <h4 className="font-codeProBold">Funded</h4>
+                        <span className="text-sm flex font-codePro font-thin">
+                          Trade with our <br /> funds in the Hub
                         </span>
                       </div>
                       <div className="right grid">
                         <div className="percent">
-                          <h3 className=" font-codeProBold text-3xl text-end">
+                          <h3 className="font-codeProBold text-3xl text-end">
                             70/30
                           </h3>
-                          <span className="flex justify-end text-xs font-codePro font-bold text-end">
+                          <span className="flex justify-end text-[0.7rem] font-codePro text-end">
                             Profit Share
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="card-middle grid gap-3 px-4 font-thin">
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">NO</span> minimum Trading
-                        Days
+                    <div className="card-middle grid gap-5 px-4 font-thin">
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">NO</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">5%</span> minimum Trading
-                        Days
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">5%</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
-                        <span className="font-bold">10%</span> minimum Trading
-                        Days
+                      <p className="text-base font-normal font-codePro">
+                        <span className="font-codeProBold text-base">10%</span>{" "}
+                        minimum Trading Days
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
+                      <p className="text-base font-normal font-codePro">
                         Trading Period -
-                        <span className="font-bold capitalize">Indefinite</span>
+                        <span className="font-extrabold capitalize text-base">Indefinite</span>
                       </p>
-                      <p className="text-[1.05rem] font-normal font-codePro">
+                      <p className="text-base font-normal font-codePro">
                         Refundable registration fee
                       </p>
                     </div>

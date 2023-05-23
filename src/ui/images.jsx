@@ -1,7 +1,7 @@
 import mainLogo from "../assets/images/logo.png";
 import tick from "../assets/images/tick.svg";
 import growGraph from "../assets/images/grow-graph.svg";
-import dashboard from "../assets/images/desktop.png";
+import dashboard from "../assets/images/dashboard.webp";
 import discord from "../assets/images/discord.svg";
 import discordMobile from "../assets/images/discord-mobile.png";
 import arrow from "../assets/images/arrow.svg";
@@ -22,10 +22,11 @@ export {
   tringle,
 };
 
-
-  {/* triangle */}
+{
+  /* triangle */
+}
 <img
   className="triangle absolute -bottom-[20rem] -left-[15rem]  w-[50rem] rotate-[80deg] opacity-[0.25]"
   src={tringle}
   alt="tringle"
-/>
+/>;

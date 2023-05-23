@@ -1,32 +1,55 @@
 import React from "react";
 import { arrow, tringle } from "../ui/images";
 
+import SingleFAQ from "./SingleFAQ";
+
 export default function FAQ() {
+  const headings = [
+    `Do you offer <span className="font-extrabold text-base"> Leverage</span>?`,
+    'Can I hold trades over the <span className="font-extrabold text-base"> weekend</span>?',
+    'Can I have <span className="font-extrabold text-base"> more</span> than one challenge ?',
+    'Is there any <span className="font-extrabold text-base"> restrictions </span> on trading?',
+  ];
+
+  const paras = [
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, saepe necessitatibus totam corrupti,",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, saepe necessitatibus totam corrupti,",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, saepe necessitatibus totam corrupti,",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, saepe necessitatibus totam corrupti,",
+  ];
+
   return (
     <section className="faq relative">
       <div className="container">
         <div className="wrapper grid gap-12 justify-center items-center">
           <div className="heading grid gap-2 justify-center text-center">
-            <h2 className="uppercase text-[1.7rem] font-extrabold">FAQ</h2>
+            <h2 className="font-medium text-[2rem] tracking-tight">Faq</h2>
 
-            <p className="font-codePro">
-              If you don&apos;t find your answer in frequently asked questions
-              don&apos;t hesitate contacting us at
-            </p>
+            <div className="paras">
+              <p className="font-codePro">
+                If you don&apos;t find your answer in frequently asked questions
+                don&apos;t hesitate contacting us at
+              </p>
 
-            <a
-              href="mailto: support@thefundedhub.com"
-              className="underline text-lg"
-            >
-              support@thefundedhub.com
-            </a>
+              <a
+                href="mailto: support@thefundedhub.com"
+                className="underline text-lg"
+              >
+                support@thefundedhub.com
+              </a>
+            </div>
           </div>
 
-          <div className="articles grid gap-5">
+          <div className="articles md:max-w-[90%] m-auto grid gap-5">
+            {/* {headings.map((heading, index) => (
+              <SingleFAQ key={index} heading={heading} para={paras[index]} />
+            ))} */}
+
             <article className="border border-all/30 rounded-lg">
               <header className="flex justify-between cursor-pointer py-3 px-4">
-                <h3 className="text-lg">
-                  Do you offer <span className="font-bold">Leverage</span>?
+                <h3 className="text-base">
+                  Do you offer
+                  <span className="font-extrabold text-base"> Leverage</span>?
                 </h3>
 
                 <div className="arrow flex justify-center items-center">
@@ -50,9 +73,9 @@ export default function FAQ() {
 
             <article className="border border-all/30 rounded-lg ">
               <header className="flex justify-between cursor-pointer py-3 px-4">
-                <h3 className="text-lg">
+                <h3 className="text-base">
                   Can I hold trades over the
-                  <span className="font-bold">weekend</span>?
+                  <span className="font-extrabold text-base"> weekend</span>?
                 </h3>
 
                 <div className="arrow flex justify-center items-center">
@@ -76,8 +99,10 @@ export default function FAQ() {
 
             <article className="border border-all/30 rounded-lg ">
               <header className="flex justify-between cursor-pointer py-3 px-4">
-                <h3 className="text-lg">
-                  Can I have more than one challenge ?
+                <h3 className="text-base">
+                  Can I have{" "}
+                  <span className="font-extrabold text-base"> more</span> than
+                  one challenge ?
                 </h3>
 
                 <div className="arrow flex justify-center items-center">
@@ -101,8 +126,12 @@ export default function FAQ() {
 
             <article className="border border-all/30 rounded-lg ">
               <header className="flex justify-between cursor-pointer py-3 px-4">
-                <h3 className="text-lg">
-                  Is there any restrictions on trading?
+                <h3 className="text-base">
+                  Is there any{" "}
+                  <span className="font-extrabold text-base">
+                    restrictions{" "}
+                  </span>
+                  on trading?
                 </h3>
 
                 <div className="arrow flex justify-center items-center">
@@ -135,7 +164,7 @@ export default function FAQ() {
           </div>
 
           {/* Bottom Text */}
-          <div className="bottom-texts grid justify-center items-center mt-15 mb-10 text-center">
+          <div className="bottom-texts grid justify-center items-center mt-12 mb-16 text-center">
             <h2 className="font-codePro text-3xl">Your Skills, Our Capital.</h2>
             <h4>TheFundedHub</h4>
           </div>

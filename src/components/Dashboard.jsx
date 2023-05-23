@@ -8,10 +8,10 @@ export default function Dashboard() {
       <div className="container">
         <div className="wrapper grid gap-12 justify-center items-center">
           <div className="heading grid gap-4 justify-center items-center md:text-center">
-            <h2 className="text-[1.7rem] font-extrabold">
+            <h2 className="font-medium text-[2rem] tracking-tight">
               Dashboard and Tools
             </h2>
-            <p className="text-base max-w-[55rem]">
+            <p className="max-w-[55rem]">
               To easily track your performance, you will have access to your own
               personal Dashboard to monitor your trading data in real-time.
               <br /> This helps you to avoid breaching any of the trading rules.
@@ -20,7 +20,7 @@ export default function Dashboard() {
 
           <div className="dashboard-img z-10">
             <img
-              className=" md:w-[76%]  border border-all bg-main-bg rounded-xl m-auto p-5"
+              className="md:max-w-[90%] m-auto"
               src={dashboard}
               alt="dashboard"
             />

@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       screens: {
         xs: "400px",
+        exs: "300px",
       },
       content: {
         mappic: 'url("../images/map.svg")',
@@ -19,7 +20,7 @@ module.exports = {
         light: "#3E2A50",
         primary: "#C7B3FC",
         "login-input": "#372439",
-        "all": "#C381FC",
+        all: "#C381FC",
       },
       backgroundImage: {
         map: "../images/map.svg",

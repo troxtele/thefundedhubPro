@@ -48,15 +48,15 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#"
-                    className="flex justify-center items-center font-semibold text-main-bg bg-primary rounded-lg w-28 h-8 -leading-2"
+                    className="flex justify-center items-center font-semibold text-main-bg bg-primary rounded-[0.7rem] w-[8.5rem] h-8 -leading-2"
                   >
-                    Accedi
+                    Login
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className="flex justify-center items-center font-semibold border-2 border-primary rounded-lg w-28 h-8 -leading-2"
+                    className="flex justify-center items-center font-semibold border-2 border-primary rounded-[0.7rem] w-[8.5rem] h-8 -leading-2"
                   >
                     Free Trial
                   </a>
@@ -66,7 +66,6 @@ export default function Navbar() {
               <div className="menu-bar md:hidden">
                 <svg
                   onClick={() => setnavToggle(!navToggle)}
-                  className="cursor-pointer"
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
